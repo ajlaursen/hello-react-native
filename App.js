@@ -1,12 +1,25 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, Image } from "react-native";
 
 export default function App() {
 	let x = 1;
+
+	const handlePress = () => console.log("text clicked");
+
 	return (
 		<SafeAreaView style={styles.container}>
-			<Text>Hello World again</Text>
+			<Text numberOfLines={1} onPress={handlePress}>
+				Hello World again
+			</Text>
+			<Image
+				blurRadius={.75}
+				source={{
+					width: 150,
+					height: 150,
+					uri: "https://via.placeholder.com/150",
+				}}
+			/>
 			<StatusBar style="auto" />
 		</SafeAreaView>
 	);
@@ -15,8 +28,8 @@ export default function App() {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: "lightblue",
-		// alignItems: "center",
-		// justifyContent: "center",
+		backgroundColor: "#fff",
+		alignItems: "center",
+		justifyContent: "center",
 	},
 });
