@@ -8,7 +8,9 @@ import {
 	Image,
 	TouchableWithoutFeedback,
 	TouchableOpacity,
-	TouchableHighlight
+	TouchableHighlight,
+	Button,
+	Alert,
 } from "react-native";
 
 export default function App() {
@@ -31,6 +33,15 @@ export default function App() {
 					}}
 				/>
 			</TouchableHighlight>
+			<Button
+				title={"here"}
+				onPress={() =>
+					Alert.alert("my title", "my message", [
+						{ text: "yes", onPress: () => console.log("yes") },
+						{ text: "no", onPress: () => console.log("no") },
+					])
+				}
+			></Button>
 			<StatusBar style="auto" />
 		</SafeAreaView>
 	);
