@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "learning react native",
+    "githubUrl": "https://github.com/ajlaursen/hello-react-native"
   }
 }
