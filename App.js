@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
 import {
 	StyleSheet,
@@ -11,6 +10,8 @@ import {
 	TouchableHighlight,
 	Button,
 	Alert,
+	Platform,
+	StatusBar,
 } from "react-native";
 
 export default function App() {
@@ -34,12 +35,11 @@ export default function App() {
 				/>
 			</TouchableHighlight>
 			<Button
-				title={"here"}
+				title={"press me"}
 				onPress={() =>
-					Alert.alert("my title", "my message", [
-						{ text: "yes", onPress: () => console.log("yes") },
-						{ text: "no", onPress: () => console.log("no") },
-					])
+					Alert.prompt("my title", "my message", (text) =>
+						console.log(text)
+					)
 				}
 			></Button>
 			<StatusBar style="auto" />
@@ -51,7 +51,8 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: "#fff",
-		alignItems: "center",
-		justifyContent: "center",
+		// alignItems: "center",
+		// justifyContent: "center",
+		paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
 	},
 });
