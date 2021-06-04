@@ -6,15 +6,20 @@ import { MaterialCommunityIcons, Zocial } from "@expo/vector-icons";
 
 import AppText from "./app/components/AppText/AppText";
 import LoginButton from "./app/components/LoginButton/LoginButton";
+import Card from "./app/components/Card/Card";
+
+let chairImage = require("./app/assets/chair.jpg");
 
 export default function App() {
 	return (
 		<View
-			style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+			style={{ backgroundColor: "#f8f4f4", padding: 20, paddingTop: 100 }}
 		>
-			<AppText>I love React Native!</AppText>
-			<Zocial name="email" size={60} color="dodgerblue" />
-			<LoginButton />
+			<Card
+				title="Red Jacket for sale"
+				subTitle="$100"
+				image={chairImage}
+			/>
 		</View>
 	);
 }

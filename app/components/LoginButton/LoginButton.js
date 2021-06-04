@@ -1,13 +1,15 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 import colors from "../../config/colors";
 
-export default function LoginButton() {
+export default function LoginButton({ title, onPress, color }) {
 	return (
-		<View style={styles.loginButton}>
-			<Text style={styles.text}>Login</Text>
-		</View>
+		<TouchableOpacity
+			style={[styles.loginButton, { backgroundColor: colors[color] }]}
+		>
+			<Text style={styles.text}>{title}</Text>
+		</TouchableOpacity>
 	);
 }
 
