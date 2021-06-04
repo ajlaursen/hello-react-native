@@ -5,6 +5,7 @@ import VeiwImageScreen from "./app/screens/VeiwImageScreen";
 import { MaterialCommunityIcons, Zocial } from "@expo/vector-icons";
 
 import AppText from "./app/components/AppText/AppText";
+import LoginButton from "./app/components/LoginButton/LoginButton";
 
 export default function App() {
 	return (
@@ -13,6 +14,7 @@ export default function App() {
 		>
 			<AppText>I love React Native!</AppText>
 			<Zocial name="email" size={60} color="dodgerblue" />
+			<LoginButton />
 		</View>
 	);
 }

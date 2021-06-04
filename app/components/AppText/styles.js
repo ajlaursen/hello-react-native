@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
 	text: {
 		color: "tomato",
 		fontSize: 18,
-		fontFamily: Platform.os === "android" ? "Roboto" : "Avenir",
+		fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
 	},
 });
 
