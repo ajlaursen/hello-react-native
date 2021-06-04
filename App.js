@@ -12,16 +12,26 @@ import {
 	Alert,
 	Platform,
 	StatusBar,
+	Dimensions,
 } from "react-native";
+import { useDimensions, useDeviceOrientation } from "@react-native-community/hooks";
 
 export default function App() {
 	let x = 1;
 
 	const handlePress = () => console.log("text clicked");
+	const {landscape} = useDeviceOrientation()
 
 	return (
 		<SafeAreaView style={styles.container}>
-			<Text numberOfLines={1} onPress={handlePress}>
+			<View
+				style={{
+					backgroundColor: "dodgerblue",
+					width: "100%",
+					height: landscape ? "100%" : "30%"
+				}}
+			></View>
+			{/* <Text numberOfLines={1} onPress={handlePress}>
 				Hello World again
 			</Text>
 			<TouchableHighlight onPress={() => console.log("pressed Image")}>
@@ -42,7 +52,7 @@ export default function App() {
 					)
 				}
 			></Button>
-			<StatusBar style="auto" />
+			<StatusBar style="auto" /> */}
 		</SafeAreaView>
 	);
 }
