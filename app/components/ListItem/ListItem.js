@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import AppText from "../AppText/AppText";
 
+
 import colors from "../../config/colors";
 
 export default function ListItem({ image, title, subTitle }) {

@@ -12,5 +12,5 @@ import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 let chairImage = require("./app/assets/chair.jpg");
 
 export default function App() {
-	return <ListingDetailsScreen></ListingDetailsScreen>;
+	return <VeiwImageScreen />;
 }
