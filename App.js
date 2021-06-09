@@ -20,7 +20,10 @@ let chairImage = require("./app/assets/chair.jpg");
 export default function App() {
 	return (
 		<Screen>
-			<ListItem title="My Title" subTitle="my subTitle"></ListItem>
+			<ListItem
+				title="My Title"
+				ImageComponent={<Icon name="email"></Icon>}
+			></ListItem>
 		</Screen>
 	);
 }
