@@ -22,6 +22,7 @@ const initialMessages = [
 ];
 
 export default function MessageScreen() {
+	const [refershing, setRefreshing] = useState(false);
 	const [messages, setMessages] = useState(initialMessages);
 	const handleDelete = (message) => {
 		setMessages(messages.filter((m) => m.id !== message.id));
@@ -46,6 +47,17 @@ export default function MessageScreen() {
 					/>
 				)}
 				ItemSeparatorComponent={ListItemSerporator}
+				refreshing={refershing}
+				onRefresh={() =>
+					setMessages([
+						{
+							id: 2,
+							title: "T2",
+							description: "d2",
+							image: require("../assets/mosh.jpg"),
+						},
+					])
+				}
 			/>
 		</Screen>
 	);
