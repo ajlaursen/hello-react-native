@@ -3,6 +3,7 @@ import { View, Text } from "react-native";
 import WelcomeScreen from "./app/screens/WelcomScreens";
 import VeiwImageScreen from "./app/screens/VeiwImageScreen";
 import { MaterialCommunityIcons, Zocial } from "@expo/vector-icons";
+import 'react-native-gesture-handler';
 
 import AppText from "./app/components/AppText/AppText";
 import LoginButton from "./app/components/LoginButton/LoginButton";

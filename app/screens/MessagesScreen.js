@@ -4,6 +4,7 @@ import { View, Text, FlatList, SafeAreaView, StyleSheet } from "react-native";
 import ListItemSerporator from "../components/ListItemSeperator";
 import ListItem from "../components/ListItem/ListItem";
 import Screen from "../components/Screen/Screen";
+import ListItmeDeleteAction from "../components/ListItemDeleteAction/ListItemDeleteAction";
 
 const messages = [
 	{
@@ -31,6 +32,8 @@ export default function MessageScreen() {
 						title={item.title}
 						subTitle={item.description}
 						image={item.image}
+						onPress={() => console.log("here")}
+						renderRightActions={ListItmeDeleteAction}
 					/>
 				)}
 				ItemSeparatorComponent={ListItemSerporator}
