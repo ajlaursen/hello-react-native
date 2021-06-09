@@ -1,18 +1,20 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableWithoutFeedback } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import colors from "../../config/colors";
 
-export default function ListItmeDeleteAction() {
+export default function ListItmeDeleteAction({ onPress }) {
 	return (
-		<View style={styles.delete}>
-			<MaterialCommunityIcons
-				name="trash-can-outline"
-				color="white"
-				size={35}
-			/>
-		</View>
+		<TouchableWithoutFeedback onPress={onPress}>
+			<View style={styles.delete}>
+				<MaterialCommunityIcons
+					name="trash-can-outline"
+					color="white"
+					size={35}
+				/>
+			</View>
+		</TouchableWithoutFeedback>
 	);
 }
 
