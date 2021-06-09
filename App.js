@@ -8,9 +8,10 @@ import AppText from "./app/components/AppText/AppText";
 import LoginButton from "./app/components/LoginButton/LoginButton";
 import Card from "./app/components/Card/Card";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import MessageScreen from "./app/screens/MessagesScreen";
 
 let chairImage = require("./app/assets/chair.jpg");
 
 export default function App() {
-	return <VeiwImageScreen />;
+	return <MessageScreen />;
 }
