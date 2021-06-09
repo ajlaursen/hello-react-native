@@ -18,12 +18,5 @@ import ListItem from "./app/components/ListItem/ListItem";
 let chairImage = require("./app/assets/chair.jpg");
 
 export default function App() {
-	return (
-		<Screen>
-			<ListItem
-				title="My Title"
-				ImageComponent={<Icon name="email"></Icon>}
-			></ListItem>
-		</Screen>
-	);
+	return <MyAccountScreen />;
 }

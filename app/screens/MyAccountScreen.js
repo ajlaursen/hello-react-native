@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { createPortal } from "react-dom";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, FlatList } from "react-native";
 
+import Icon from "../components/Icon/Icon";
 import ListItem from "../components/ListItem/ListItem";
+import ListItemSerporator from "../components/ListItemSeperator";
 import Screen from "../components/Screen/Screen";
 import colors from "../config/colors";
 
@@ -13,10 +15,27 @@ const info = {
 	image: require("../assets/mosh.jpg"),
 };
 
+const menuItems = [
+	{
+		title: "My Listings",
+		icon: {
+			name: "format-list-bulleted",
+			backgroundColor: colors.primary,
+		},
+	},
+	{
+		title: "My Messages",
+		icon: {
+			name: "email",
+			backgroundColor: colors.secondary,
+		},
+	},
+];
+
 export default function MyAccountScreen() {
 	return (
-		<Screen styles={styles.accountScreen}>
-			<View style={styles.listItemContainer}>
+		<Screen style={styles.screen}>
+			<View style={styles.container}>
 				<ListItem
 					title={info.name}
 					subTitle={info.email}
@@ -24,18 +43,37 @@ export default function MyAccountScreen() {
 					styles={styles.item}
 				></ListItem>
 			</View>
-      
+			<View style={styles.container}>
+				<FlatList
+					data={menuItems}
+					keyExtractor={(item) => item.title}
+					ItemSeparatorComponent={ListItemSerporator}
+					renderItem={({ item }) => (
+						<ListItem
+							title={item.title}
+							ImageComponent={
+								<Icon
+									name={item.icon.name}
+									backgroundColor={item.icon.backgroundColor}
+								></Icon>
+							}
+							subTitle={item.subTitle}
+							image={item.image}
+						></ListItem>
+					)}
+				/>
+			</View>
 		</Screen>
 	);
 }
 
 const styles = StyleSheet.create({
-	accountScreen: {
-		backgroundColor: colors.black,
-	},
-	listItemContainer: {
+	container: {
 		marginTop: 15,
 		marginBottom: 15,
 		backgroundColor: colors.white,
+	},
+	screen: {
+		backgroundColor: colors.light,
 	},
 });
