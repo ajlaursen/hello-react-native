@@ -15,7 +15,7 @@ export default function ListItem({
 	image,
 	title,
 	subTitle,
-	ImageComponent,
+	IconComponent,
 	onPress,
 	renderRightActions,
 }) {
@@ -23,7 +23,7 @@ export default function ListItem({
 		<Swipeable renderRightActions={renderRightActions}>
 			<TouchableHighlight onPress={onPress} underlayColor={colors.light}>
 				<View style={styles.container}>
-					{ImageComponent}
+					{IconComponent}
 					{image && (
 						<Image source={image} style={styles.image}></Image>
 					)}

@@ -14,9 +14,10 @@ import MessageScreen from "./app/screens/MessagesScreen";
 import MyAccountScreen from "./app/screens/MyAccountScreen";
 import Icon from "./app/components/Icon/Icon";
 import ListItem from "./app/components/ListItem/ListItem";
+import ListingScreen from "./app/screens/ListingScreen";
 
 let chairImage = require("./app/assets/chair.jpg");
 
 export default function App() {
-	return <MyAccountScreen />;
+	return <ListingScreen />;
 }

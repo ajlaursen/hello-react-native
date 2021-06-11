@@ -51,7 +51,7 @@ export default function MyAccountScreen() {
 					renderItem={({ item }) => (
 						<ListItem
 							title={item.title}
-							ImageComponent={
+							IconComponent={
 								<Icon
 									name={item.icon.name}
 									backgroundColor={item.icon.backgroundColor}
@@ -63,6 +63,12 @@ export default function MyAccountScreen() {
 					)}
 				/>
 			</View>
+			<ListItem
+				title="Log Out"
+				IconComponent={
+					<Icon name="logout" backgroundColor="#ffe66d"></Icon>
+				}
+			></ListItem>
 		</Screen>
 	);
 }
