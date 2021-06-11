@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { View, Text, FlatList, SafeAreaView, StyleSheet } from "react-native";
 
 import ListItemSerporator from "../components/ListItemSeperator";
-import ListItem from "../components/ListItem/ListItem";
-import Screen from "../components/Screen/Screen";
-import ListItmeDeleteAction from "../components/ListItemDeleteAction/ListItemDeleteAction";
+import ListItem from "../components/ListItem";
+import Screen from "../components/Screen";
+import ListItmeDeleteAction from "../components/ListItemDeleteAction";
 
 const initialMessages = [
 	{

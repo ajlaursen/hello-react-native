@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, ImageBackground, StyleSheet, Image } from "react-native";
-import LoginButton from "../components/LoginButton/LoginButton";
+import LoginButton from "../components/LoginButton";
 
 import colors from "../config/colors";
 

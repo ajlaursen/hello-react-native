@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { createPortal } from "react-dom";
 import { View, StyleSheet, FlatList } from "react-native";
 
-import Icon from "../components/Icon/Icon";
-import ListItem from "../components/ListItem/ListItem";
+import Icon from "../components/Icon";
+import ListItem from "../components/ListItem";
 import ListItemSerporator from "../components/ListItemSeperator";
-import Screen from "../components/Screen/Screen";
+import Screen from "../components/Screen";
 import colors from "../config/colors";
 
 const info = {
