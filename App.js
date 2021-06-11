@@ -1,5 +1,5 @@
-import React from "react";
-import { View, Text } from "react-native";
+import React, { useState } from "react";
+import { Text, TextInput } from "react-native";
 import WelcomeScreen from "./app/screens/WelcomScreens";
 import VeiwImageScreen from "./app/screens/VeiwImageScreen";
 import { MaterialCommunityIcons, Zocial } from "@expo/vector-icons";
@@ -15,9 +15,14 @@ import MyAccountScreen from "./app/screens/MyAccountScreen";
 import Icon from "./app/components/Icon/Icon";
 import ListItem from "./app/components/ListItem/ListItem";
 import ListingScreen from "./app/screens/ListingScreen";
+import AppTextInput from "./app/components/AppTextInput/AppTextInput";
 
 let chairImage = require("./app/assets/chair.jpg");
 
 export default function App() {
-	return <ListingScreen />;
+	return (
+		<Screen>
+			<AppTextInput placeholder="UserName" icon="email"></AppTextInput>
+		</Screen>
+	);
 }
